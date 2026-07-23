@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlavorNest | Gastronomy Reimagined</title>
+  <meta name="description" content="FlavorNest is an award-winning premium e-commerce platform offering luxury restaurant-style dining delivered with absolute precision.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/animations.css?v=12">
+  <link rel="stylesheet" href="css/responsive.css?v=12">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-dot"></div>
+
+  <!-- Screen Loader -->
+  <div id="loader-overlay">
+    <video class="loader-video-bg" autoplay muted loop playsinline>
+      <source src="assets/coffee.mp4" type="video/mp4">
+    </video>
+    <div class="loader-logo">Flavor<span>Nest</span></div>
+    <div class="cooking-animation">
+      <div class="loader-plate"></div>
+      <div class="loader-food">🍕</div>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="navbar-header">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5"></path>
+          <path d="M2 12l10 5 10-5"></path>
+        </svg>
+        Flavor<span>Nest</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="pages/menu.html" class="nav-link">Menu</a>
+        <a href="pages/about.html" class="nav-link">Our Story</a>
+        <a href="pages/offers.html" class="nav-link">Offers</a>
+        <a href="pages/contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="action-btn search-trigger" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="pages/cart.html" class="action-btn" aria-label="Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count cart-badge" style="display:none;">0</span>
+        </a>
+        <a href="pages/login.html" class="action-btn" aria-label="User Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <div class="mobile-nav-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero animated-mesh-bg">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="offer-tag">
+            <span>🍕 Pizza • Truffle Royale</span>
+          </div>
+          <h1 class="hero-title">Fresh Food <br><span>Delivered Faster</span></h1>
+          <p class="hero-desc">Every bite tells a story. Taste the craftsmanship of master chefs, delivered with clinical precision to your doorstep.</p>
+          
+          <div class="hero-cta">
+            <a href="pages/menu.html" class="btn-premium magnetic"><span>Explore Menu</span></a>
+            <a href="pages/about.html" class="btn-secondary-glass"><span>Our Story</span></a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>20+</h3>
+              <p>Michelin Chefs</p>
+            </div>
+            <div class="stat-item">
+              <h3>25m</h3>
+              <p>Average Delivery</p>
+            </div>
+            <div class="stat-item">
+              <h3>4.9★</h3>
+              <p>Customer Rating</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="glow-bg"></div>
+          
+          <!-- Floating elements -->
+          <div class="floating-card glass-panel card-rating float-item">
+            <div class="floating-card-icon">★</div>
+            <div class="floating-card-info">
+              <h4>4.9 (142 reviews)</h4>
+              <p>Gourmet Rating</p>
+            </div>
+          </div>
+
+          <div class="floating-card glass-panel card-delivery float-item-reverse">
+            <div class="floating-card-icon">⏱</div>
+            <div class="floating-card-info">
+              <h4>20-30 Mins</h4>
+              <p>Fastest Delivery</p>
+            </div>
+          </div>
+
+          <!-- Decorative Ingredients -->
+          <div class="floating-ingredient ing-1 float-item">🍁</div>
+          <div class="floating-ingredient ing-2 float-item-reverse">🌶</div>
+          <div class="floating-ingredient ing-3 float-item">🍃</div>
+          <div class="floating-ingredient ing-4 float-item-reverse">🍄</div>
+
+          <div class="hero-video-frame" data-depth="0.08">
+            <video autoplay muted loop playsinline id="hero-video-player">
+              <source src="assets/pizza.mp4" type="video/mp4">
+              <!-- Fallback Image if Video doesn't load -->
+              <img src="assets/pizza_0.jpg" alt="Gourmet Pizza Layer">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrow Slide controls -->
+      <div style="position: absolute; bottom: 40px; right: 2rem; display:flex; gap:1rem; z-index:20;">
+        <button class="action-btn hero-prev-btn" aria-label="Previous Slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+        <button class="action-btn hero-next-btn" aria-label="Next Slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; font-family: var(--font-accent); font-size: 0.8rem; color: var(--text-muted); cursor: pointer; z-index: 20;">
+        <span class="scroll-text">Scroll Down</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="bounce-scroll">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container" style="padding-top: 6rem;">
+      <div class="section-header reveal-el">
+        <span class="section-subtitle">Exquisite Taste</span>
+        <h2 class="section-title">Curated Categories</h2>
+      </div>
+
+      <div class="categories-grid" data-particles="10">
+        <div class="category-card glass-panel reveal-el delay-100" data-category="Pizza">
+          <div class="category-icon-wrapper"><img src="assets/pizza_0.jpg" alt="Pizza"></div>
+          <h3>Pizza</h3>
+        </div>
+        <div class="category-card glass-panel reveal-el delay-200" data-category="Burgers">
+          <div class="category-icon-wrapper"><img src="assets/burger_0.jpg" alt="Burgers"></div>
+          <h3>Burgers</h3>
+        </div>
+        <div class="category-card glass-panel reveal-el delay-300" data-category="Pasta">
+          <div class="category-icon-wrapper"><img src="assets/pasta_0.jpg" alt="Pasta"></div>
+          <h3>Pasta</h3>
+        </div>
+        <div class="category-card glass-panel reveal-el delay-300" data-category="Asian Food">
+          <div class="category-icon-wrapper"><img src="assets/asian_0.jpg" alt="Asian Food"></div>
+          <h3>Asian Food</h3>
+        </div>
+        <div class="category-card glass-panel reveal-el delay-400" data-category="Salads">
+          <div class="category-icon-wrapper"><img src="assets/salad_0.jpg" alt="Salads"></div>
+          <h3>Salads</h3>
+        </div>
+        <div class="category-card glass-panel reveal-el delay-500" data-category="Desserts">
+          <div class="category-icon-wrapper"><img src="assets/desserts_0.jpg" alt="Desserts"></div>
+          <h3>Desserts</h3>
+        </div>
+        <div class="category-card glass-panel reveal-el delay-500" data-category="Drinks">
+          <div class="category-icon-wrapper"><img src="assets/drinks_0.jpg" alt="Drinks"></div>
+          <h3>Drinks</h3>
+        </div>
+        <div class="category-card glass-panel reveal-el delay-500" data-category="Sandwiches">
+          <div class="category-icon-wrapper"><img src="assets/sandwiches_0.jpg" alt="Sandwiches"></div>
+          <h3>Sandwiches</h3>
+        </div>
+        <div class="category-card glass-panel reveal-el delay-500" data-category="Fries">
+          <div class="category-icon-wrapper"><img src="assets/fries_0.jpg" alt="Fries"></div>
+          <h3>Fries</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="container products-wrapper">
+      <div class="section-header reveal-el">
+        <span class="section-subtitle">Gourmet Selection</span>
+        <h2 class="section-title">Chef Specials</h2>
+      </div>
+
+      <div id="featured-products-container" class="products-grid">
+        <!-- Rendered dynamically by js/app.js?v=12 -->
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;" class="reveal-el">
+        <a href="pages/menu.html" class="btn-premium"><span>View Complete Menu</span></a>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section animated-mesh-bg">
+      <div class="container">
+        <div class="section-header reveal-el">
+          <span class="section-subtitle">Testimonials</span>
+          <h2 class="section-title">Flock Feedbacks</h2>
+        </div>
+
+        <div class="reviews-slider-wrapper reveal-el">
+          <!-- Slide 1 -->
+          <div class="review-slide active">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"FlavorNest is absolute culinary wizardry. The Gourmet Truffle Pizza has an airy sourdough crust that is unmatched, and the custom home delivery details are premium."</p>
+            <div class="review-user">
+              <img src="assets/avatar_female_1.jpg" alt="Jane Doe" class="review-avatar">
+              <div class="review-info">
+                <h4>Lady Elizabeth Vance</h4>
+                <p>New York • Verified Diner</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="review-slide">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The Wagyu Gold Truffle Burger is a masterpiece of culinary texture. It arrived perfectly medium rare and in custom glassmorphic-style eco boxes."</p>
+            <div class="review-user">
+              <img src="assets/avatar_male_1.jpg" alt="John Smith" class="review-avatar">
+              <div class="review-info">
+                <h4>Sir Charles Harrison</h4>
+                <p>London • Gastronomist</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="review-slide">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Authentic Sicilian Pistachio Gelato delivered at freezing levels without any structural melt! Beautiful storytelling, fast logistics, and absolute premium service."</p>
+            <div class="review-user">
+              <img src="assets/avatar_female_2.jpg" alt="Sarah Connor" class="review-avatar">
+              <div class="review-info">
+                <h4>Helena Rostova</h4>
+                <p>Rome • Culinary Critic</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls dots -->
+          <div class="slider-controls"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="container newsletter-section" style="padding-top: 6rem;">
+      <div class="newsletter-panel glass-panel reveal-el">
+        <h2 class="newsletter-title">Subscribe to the Flock</h2>
+        <p class="newsletter-desc">Join the culinary circle for exclusive updates, curated chef tastings, and seasonal luxury releases.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-wave"></div>
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+          Flavor<span>Nest</span>
+        </a>
+        <p>A next-generation premium food e-commerce experience designed with luxury and creative art at its core.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">F</a>
+          <a href="#" class="social-link" aria-label="Twitter">T</a>
+          <a href="#" class="social-link" aria-label="Instagram">I</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">L</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="pages/menu.html">Menu Grid</a>
+          <a href="pages/about.html">Our Story</a>
+          <a href="pages/contact.html">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Support</h4>
+        <div class="footer-links">
+          <a href="pages/profile.html">My Account</a>
+          <a href="pages/cart.html">View Cart</a>
+          <a href="pages/checkout.html">Logistics Staging</a>
+          <a href="#">Privacy Codes</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Download App</h4>
+        <div class="app-downloads">
+          <a href="#" class="app-btn">
+            <span class="app-btn-icon"></span>
+            <div class="app-btn-info">
+              <h5>Download on the</h5>
+              <p>App Store</p>
+            </div>
+          </a>
+          <a href="#" class="app-btn">
+            <span class="app-btn-icon">▶</span>
+            <div class="app-btn-info">
+              <h5>Get it on</h5>
+              <p>Google Play</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 FlavorNest Gastronomy Inc. All rights reserved.</p>
+      <p>Awwwards Concept Platform designed using pure Vanilla Stack.</p>
+    </div>
+
+    <!-- Scroll Top button -->
+    <div class="scroll-top-btn" aria-label="Scroll to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </div>
+  </footer>
+
+  <!-- Search Popup Overlay -->
+  <div id="search-overlay"></div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/storage.js?v=12"></script>
+  <script src="js/loader.js?v=12"></script>
+  <script src="js/cursor.js?v=12"></script>
+  <script src="js/toast.js?v=12"></script>
+  <script src="js/navbar.js?v=12"></script>
+  <script src="js/products.js?v=12"></script>
+  <script src="js/cart.js?v=12"></script>
+  <script src="js/wishlist.js?v=12"></script>
+  <script src="js/search.js?v=12"></script>
+  <script src="js/slider.js?v=12"></script>
+  <script src="js/animations.js?v=12"></script>
+  <script src="js/hero.js?v=12"></script>
+  <script src="js/tilt.js?v=12"></script>
+  <script src="js/app.js?v=12"></script>
+</body>
+</html>

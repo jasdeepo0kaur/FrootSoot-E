@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offers & Coupons | FlavorNest</title>
+  <meta name="description" content="Unlock exclusive food coupons, flash deals, scratch cards, and spin & win prizes at FlavorNest. Save more on every gourmet bite.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/offers.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-dot"></div>
+
+  <!-- Screen Loader -->
+  <div id="loader-overlay">
+    <div class="loader-logo">Flavor<span>Nest</span></div>
+    <div class="cooking-animation">
+      <div class="loader-plate"></div>
+      <div class="loader-food">🍔</div>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="navbar-header">
+    <div class="container navbar-container">
+      <a href="../index.html" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5"></path>
+          <path d="M2 12l10 5 10-5"></path>
+        </svg>
+        Flavor<span>Nest</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="about.html" class="nav-link">Our Story</a>
+        <a href="offers.html" class="nav-link active">Offers</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="action-btn search-trigger" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="cart.html" class="action-btn" aria-label="Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count cart-badge" style="display:none;">0</span>
+        </a>
+        <a href="login.html" class="action-btn" aria-label="User Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <div class="mobile-nav-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Title Header -->
+  <section class="page-heading">
+    <div class="container">
+      <h1>Exclusive Dining Deals</h1>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> &gt; <span>Offers & Coupons</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Section Wrapper -->
+  <main class="offers-page">
+    <!-- Glowing background circles -->
+    <div class="bg-glow-circle glow-orange"></div>
+    <div class="bg-glow-circle glow-yellow"></div>
+    <div class="bg-glow-circle glow-red"></div>
+
+    <!-- Floating Food Emojis / Sparkles -->
+    <div class="bg-floating-container"></div>
+
+    <div class="container">
+      
+      <!-- Section Header -->
+      <header class="offers-header reveal-el">
+        <span class="section-subtitle">🔥 Exclusive Offers</span>
+        <h2 class="section-title">Save more, spin to win, and enjoy delicious weekend deals</h2>
+        <p class="section-desc">Taste the craftsmanship of FlavorNest with premium discounts, interactive rewards, and limited-edition weekend bundles.</p>
+      </header>
+
+      <!-- Offers Grid Layout (Stacked Vertically one-by-one) -->
+      <div class="offers-grid-container">
+
+        <!-- OFFER 1: Premium Coupon ticket (Top Center) -->
+        <div class="col-12 reveal-el delay-100 hero-coupon-container" style="margin-bottom: 1.5rem;">
+          <div class="hero-ticket">
+            <!-- Semi-circle ticket border punch outs -->
+            <div class="ticket-punch-top"></div>
+            <div class="ticket-punch-bottom"></div>
+            
+            <span class="sparkle-icon" style="top: 20px; left: 30px;">✨</span>
+            <span class="sparkle-icon" style="bottom: 30px; right: 40px; animation-delay: 1.2s;">✨</span>
+            <span class="sparkle-icon" style="top: 80px; right: 300px; animation-delay: 0.6s;">✨</span>
+
+            <div class="ticket-left">
+              <div class="ticket-tag">
+                <span>🎉</span> WELCOME GIFT
+              </div>
+              <h3 class="ticket-title">Flat 20% OFF on your First Order</h3>
+              <p class="ticket-desc">Indulge in Michelin-inspired recipes with flat 20% discount. Maximum discount ₹150.</p>
+              <div class="ticket-expiry">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: -2px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Valid Today Only</span>
+              </div>
+            </div>
+            
+            <div class="ticket-right">
+              <div class="ticket-code-display">WELCOME20</div>
+              <button class="btn-ticket-copy" onclick="copyCouponCode('WELCOME20', this)">
+                <span>Copy Coupon</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- OFFER 2: Spin & Win Wheel -->
+        <div class="col-12 reveal-el delay-200">
+          <div class="offers-card spin-section-layout">
+            <h3 style="font-family: var(--font-heading); font-size: 2rem; font-weight:800; margin-bottom:0.5rem;">🎡 Spin & Win Wheel</h3>
+            <p style="color:var(--text-muted); font-size:1rem; text-align:center; margin-bottom:2.5rem; max-width:550px;">
+              Try your luck on the master spinning wheel to win premium discount codes or free snacks! (One spin allowed per order session)
+            </p>
+            
+            <div class="wheel-outer-ring">
+              <!-- Pointer indicator at top -->
+              <div class="wheel-pointer"></div>
+              
+              <!-- Bulbs -->
+              <div class="wheel-bulbs">
+                <div class="wheel-bulb" style="transform: rotate(0deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(30deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(60deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(90deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(120deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(150deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(180deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(210deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(240deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(270deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(300deg) translate(144px);"></div>
+                <div class="wheel-bulb" style="transform: rotate(330deg) translate(144px);"></div>
+              </div>
+
+              <!-- Canvas wheel wrapper -->
+              <div id="wheel-wrapper">
+                <canvas id="wheel-canvas" class="wheel-canvas-fallback"></canvas>
+              </div>
+
+              <!-- Spin Button -->
+              <button class="wheel-spin-btn" id="wheel-spin-btn">SPIN</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- OFFER 3: Weekend Mood - Tummy Full Combo Banner -->
+        <div class="col-12 reveal-el delay-300">
+          <div class="weekend-banner">
+            <div class="weekend-content-left">
+              <span class="weekend-badge">✨ Weekend Special</span>
+              <span class="weekend-badge" style="background: rgba(0,0,0,0.15); margin-left: 0.5rem; border-color: rgba(255,255,255,0.2);">🎉 Weekend Mood</span>
+              <h2 class="weekend-title">Tummy Full Combo 🍔🍟🥤</h2>
+              <p class="weekend-subtitle">Everything you love in one delicious combo. Satisfy your weekend cravings in absolute style.</p>
+              
+              <div class="weekend-items" style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+                🍔 Signature Burger + 🍟 Crispy Fries + 🥤 Chilled Soft Drink + 🍰 Dessert
+              </div>
+
+              <div class="weekend-pricing" style="margin-bottom: 2rem;">
+                <span class="special-price">Only ₹399</span>
+                <span class="save-badge">🔥 Save ₹180</span>
+              </div>
+
+              <button class="btn-weekend-order" id="order-combo-btn">
+                <span>Order Now</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+            
+            <div class="weekend-visual-right">
+              <span class="large-food-illustration">🍔</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- OFFER 4: Invite Friend (Referral Section Restored) -->
+        <div class="col-12 reveal-el delay-100">
+          <div class="offers-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="referral-icon">🤝</span>
+            <h3 class="referral-title">Invite Your Friends</h3>
+            <p class="referral-desc" style="max-width: 550px;">
+              Share delicious moments with your friends and earn rewards together. When they place their first order, you both qualify for luxury credits!
+            </p>
+            
+            <div class="referral-reward-box">
+              <div class="reward-badge">
+                <span class="reward-val">₹150</span>
+                <span class="reward-who">You Get</span>
+                <p style="font-size:0.75rem; color:var(--text-muted); margin-top:0.4rem; font-weight:500;">Food Credits</p>
+              </div>
+              <div class="reward-badge">
+                <span class="reward-val">₹150</span>
+                <span class="reward-who">Friend Gets</span>
+                <p style="font-size:0.75rem; color:var(--text-muted); margin-top:0.4rem; font-weight:500;">Food Credits</p>
+              </div>
+            </div>
+
+            <button class="btn-referral" id="invite-now-btn">Invite Now</button>
+          </div>
+        </div>
+
+      </div> <!-- Grid container close -->
+    </div> <!-- Container close -->
+  </main>
+
+  <!-- Spin Reward Modal Popup -->
+  <div class="modal-overlay" id="spin-win-modal">
+    <!-- Managed by js/offers.js dynamically -->
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-wave"></div>
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a href="../index.html" class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+          Flavor<span>Nest</span>
+        </a>
+        <p>A next-generation premium food e-commerce experience designed with luxury and creative art at its core.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">F</a>
+          <a href="#" class="social-link" aria-label="Twitter">T</a>
+          <a href="#" class="social-link" aria-label="Instagram">I</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">L</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="menu.html">Menu Grid</a>
+          <a href="about.html">Our Story</a>
+          <a href="contact.html">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Support</h4>
+        <div class="footer-links">
+          <a href="profile.html">My Account</a>
+          <a href="cart.html">View Cart</a>
+          <a href="checkout.html">Logistics Staging</a>
+          <a href="#">Privacy Codes</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Download App</h4>
+        <div class="app-downloads">
+          <a href="#" class="app-btn">
+            <span class="app-btn-icon"></span>
+            <div class="app-btn-info">
+              <h5>Download on the</h5>
+              <p>App Store</p>
+            </div>
+          </a>
+          <a href="#" class="app-btn">
+            <span class="app-btn-icon">▶</span>
+            <div class="app-btn-info">
+              <h5>Get it on</h5>
+              <p>Google Play</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 FlavorNest Gastronomy Inc. All rights reserved.</p>
+      <p>Awwwards Concept Platform designed using pure Vanilla Stack.</p>
+    </div>
+
+    <!-- Scroll Top button -->
+    <div class="scroll-top-btn" aria-label="Scroll to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </div>
+  </footer>
+
+  <!-- Search Popup Overlay (Matches global styling) -->
+  <div id="search-overlay"></div>
+
+  <!-- JavaScript Scripts -->
+  <script src="../js/storage.js?v=12"></script>
+  <script src="../js/loader.js?v=12"></script>
+  <script src="../js/cursor.js?v=12"></script>
+  <script src="../js/toast.js?v=12"></script>
+  <script src="../js/navbar.js?v=12"></script>
+  <script src="../js/products.js?v=12"></script>
+  <script src="../js/cart.js?v=12"></script>
+  <script src="../js/wishlist.js?v=12"></script>
+  <script src="../js/search.js?v=12"></script>
+  <script src="../js/slider.js?v=12"></script>
+  <script src="../js/animations.js?v=12"></script>
+  <script src="../js/hero.js?v=12"></script>
+  <script src="../js/tilt.js?v=12"></script>
+  <script src="../js/offers.js?v=12"></script>
+  <script src="../js/app.js?v=12"></script>
+</body>
+</html>

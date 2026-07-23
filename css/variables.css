@@ -1,0 +1,58 @@
+/* css/variables.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-color: #FFF8F3;
+  --secondary-color: #FFFFFF;
+  --primary-color: #FF6B35;
+  --primary-rgb: 255, 107, 53;
+  --accent-color: #FFB703;
+  --dark-color: #1F1F1F;
+  --text-color: #333333;
+  --text-muted: #666666;
+  --success-color: #38B000;
+  
+  /* Glassmorphism Options */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+  --glass-blur: blur(12px);
+
+  --dark-glass-bg: rgba(31, 31, 31, 0.75);
+  --dark-glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Gradients */
+  --btn-gradient: linear-gradient(135deg, #FF6B35 0%, #FFB703 100%);
+  --btn-gradient-hover: linear-gradient(135deg, #FFB703 0%, #FF6B35 100%);
+  --mesh-gradient: radial-gradient(at 0% 0%, rgba(255, 183, 3, 0.15) 0px, transparent 50%),
+                   radial-gradient(at 100% 0%, rgba(255, 107, 53, 0.15) 0px, transparent 50%),
+                   radial-gradient(at 50% 100%, rgba(255, 183, 3, 0.08) 0px, transparent 50%);
+
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-accent: 'Sora', sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(31, 38, 135, 0.05);
+  --shadow-lg: 0 16px 40px rgba(31, 38, 135, 0.08);
+  --shadow-premium: 0 30px 60px rgba(255, 107, 53, 0.12);
+  
+  /* Borders */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 40px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-bounce: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout */
+  --max-width: 1400px;
+  --header-height: 80px;
+}

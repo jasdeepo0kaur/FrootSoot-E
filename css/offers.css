@@ -1,0 +1,862 @@
+/* css/offers.css */
+
+/* Core Container & Background Style */
+.offers-page {
+  background-color: var(--bg-color); /* Matches FlavorNest light background */
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0 8rem 0;
+  font-family: var(--font-primary);
+  min-height: 100vh;
+}
+
+/* Background floating animation assets */
+.bg-floating-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bg-floating-item {
+  position: absolute;
+  font-size: 2.2rem;
+  opacity: 0.08;
+  filter: blur(0.5px);
+  user-select: none;
+  will-change: transform;
+}
+
+.bg-glow-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+.glow-orange {
+  background: var(--primary-color);
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  left: -100px;
+}
+
+.glow-yellow {
+  background: var(--accent-color);
+  width: 350px;
+  height: 350px;
+  bottom: 10%;
+  right: -100px;
+}
+
+.glow-red {
+  background: #FF4D4F;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 30%;
+}
+
+/* Section Header styling */
+.offers-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 5rem auto;
+  position: relative;
+  z-index: 5;
+}
+
+.offers-header .section-subtitle {
+  font-family: var(--font-accent);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.offers-header .section-title {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--dark-color);
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.offers-header .section-desc {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Page header matches FlavorNest subpages */
+.page-heading {
+  background: linear-gradient(135deg, #FF6B35 0%, #FFB703 100%);
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+}
+
+.page-heading h1 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.breadcrumb {
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Layout Grids (One by one, stacked col-12) */
+.offers-grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+  position: relative;
+  z-index: 5;
+}
+
+.col-12 { grid-column: span 12; }
+
+/* Neumorphic and Glassmorphic cards */
+.offers-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(31, 38, 135, 0.03), 10px 10px 30px rgba(0, 0, 0, 0.01), -10px -10px 30px rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.offers-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(31, 38, 135, 0.06);
+}
+
+.offers-card-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+}
+
+/* 1. Premium Coupon Card Ticket */
+.hero-coupon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-ticket {
+  display: flex;
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8F50 50%, #FFB703 100%);
+  border-radius: 24px;
+  position: relative;
+  color: white;
+  width: 100%;
+  max-width: 850px;
+  min-height: 260px;
+  box-shadow: 0 20px 50px rgba(255, 107, 53, 0.22);
+  overflow: hidden;
+}
+
+/* Shimmer Light Sweeping Effect */
+.hero-ticket::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+  animation: shine-sweep 6s infinite ease-in-out;
+}
+
+@keyframes shine-sweep {
+  0% { left: -60%; }
+  15% { left: 130%; }
+  100% { left: 130%; }
+}
+
+.ticket-left {
+  flex: 7;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.ticket-right {
+  flex: 3.5;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px dashed rgba(255, 255, 255, 0.35);
+  position: relative;
+}
+
+/* Circle Punch Edges */
+.ticket-punch-top, .ticket-punch-bottom {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-color);
+  border-radius: 50%;
+  left: 66.6%;
+  margin-left: -20px;
+  z-index: 10;
+}
+
+.ticket-punch-top {
+  top: -20px;
+}
+
+.ticket-punch-bottom {
+  bottom: -20px;
+}
+
+.ticket-tag {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ticket-title {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-desc {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.ticket-expiry {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-family: var(--font-accent);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ticket-code-display {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+  color: var(--secondary-color);
+  text-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.btn-ticket-copy {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  font-weight: 700;
+  padding: 0.9rem 1.8rem;
+  border-radius: 16px;
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-ticket-copy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  background: #FFF0E8;
+}
+
+.btn-ticket-copy:active {
+  transform: translateY(-1px);
+}
+
+/* Floating Sparkle Animation for Ticket */
+.sparkle-icon {
+  position: absolute;
+  pointer-events: none;
+  font-size: 1.3rem;
+  animation: float-sparkle 3s infinite ease-in-out;
+}
+
+@keyframes float-sparkle {
+  0%, 100% { transform: scale(0.6) translateY(0); opacity: 0.3; }
+  50% { transform: scale(1.2) translateY(-15px); opacity: 1; filter: drop-shadow(0 0 8px #FFF); }
+}
+
+/* 2. Spin & Win Wheel */
+.spin-section-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.wheel-outer-ring {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1F1F1F 0%, #3A3A3A 100%);
+  padding: 12px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18), 0 0 25px rgba(255, 107, 53, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;
+  height: 45px;
+  background: #FF4D4F;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  z-index: 25;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+}
+
+.wheel-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 6s cubic-bezier(0.1, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.wheel-canvas-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.wheel-spin-btn {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  color: var(--primary-color);
+  border: 4px solid var(--dark-color);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+.wheel-spin-btn:hover {
+  transform: scale(1.08);
+}
+
+.wheel-spin-btn:active {
+  transform: scale(0.95);
+}
+
+.wheel-spin-btn.disabled {
+  background: #EFEFEF;
+  color: #AAA;
+  border-color: #DDD;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Bulbs along the outer ring border */
+.wheel-bulbs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.wheel-bulb {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px white;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  margin-top: -4px;
+  margin-left: -4px;
+}
+
+/* 3. Weekend Mood - Tummy Full Combo Banner */
+.weekend-banner {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8F50 50%, #FFB703 100%);
+  border-radius: 24px;
+  color: white;
+  padding: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.weekend-content-left {
+  position: relative;
+  z-index: 5;
+  max-width: 60%;
+}
+
+.weekend-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+  font-family: var(--font-accent);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.weekend-title {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.weekend-subtitle {
+  font-size: 1.15rem;
+  opacity: 0.95;
+  margin-bottom: 1rem;
+}
+
+.weekend-items {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.weekend-pricing {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.special-price {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.save-badge {
+  background: #FF4D4F;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-family: var(--font-accent);
+  box-shadow: 0 4px 10px rgba(255, 77, 79, 0.3);
+}
+
+.btn-weekend-order {
+  background: white;
+  color: var(--primary-color);
+  border: none;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  padding: 1rem 2.2rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  animation: pulse-glow-button 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-glow-button {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.7); }
+}
+
+.btn-weekend-order:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.4);
+}
+
+.weekend-visual-right {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+}
+
+.weekend-visual-right span.large-food-illustration {
+  font-size: 8rem;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2));
+  animation: float-illustration 5s infinite ease-in-out;
+}
+
+@keyframes float-illustration {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+/* 4. Invite Friend Card */
+.referral-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.referral-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.referral-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.referral-reward-box {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 550px;
+}
+
+.reward-badge {
+  background: #FFF5F0;
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: 16px;
+  padding: 1.2rem;
+  text-align: center;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.02);
+  transition: transform 0.2s;
+}
+
+.reward-badge:hover {
+  transform: translateY(-2px);
+}
+
+.reward-val {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  display: block;
+}
+
+.reward-who {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-referral {
+  background: var(--btn-gradient);
+  color: white;
+  border: none;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  padding: 1rem 3rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+  font-size: 1rem;
+}
+
+.btn-referral:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(255, 107, 53, 0.35);
+}
+
+/* Interactive Popups / Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 31, 31, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content-wrapper {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  transform: scale(0.85) translateY(30px);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-align: center;
+}
+
+.modal-overlay.active .modal-content-wrapper {
+  transform: scale(1) translateY(0);
+}
+
+.modal-header-section {
+  padding: 1.5rem 1.8rem;
+  border-bottom: 1px solid #EFEFEF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFBF8;
+}
+
+.modal-header-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--dark-color);
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-close-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: color 0.2s;
+  padding: 0.2rem 0.5rem;
+}
+
+.modal-close-trigger:hover {
+  color: var(--primary-color);
+}
+
+.modal-body-section {
+  padding: 2.5rem 1.8rem;
+}
+
+.scratch-code-box {
+  background: #FFF2EF;
+  border: 2px dashed var(--primary-color);
+  color: var(--primary-color);
+  font-family: var(--font-accent);
+  font-weight: 800;
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  margin: 1.5rem auto 0.8rem auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: fit-content;
+}
+
+.scratch-code-box:hover {
+  transform: scale(1.05);
+}
+
+.scratch-copy-tip {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Toast System (FlavorNest standard layout) */
+#toast-container {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  pointer-events: none;
+}
+
+.toast-el {
+  background: white;
+  color: var(--dark-color);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0,0,0,0.02);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transform: translateX(-120%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+  pointer-events: auto;
+  max-width: 350px;
+}
+
+.toast-el.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.toast-success {
+  border-left: 4px solid #2ECC71;
+}
+
+.toast-info {
+  border-left: 4px solid var(--primary-color);
+}
+
+.toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Confetti canvas overlay */
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1500;
+}
+
+/* Responsive elements */
+@media (max-width: 991px) {
+  .weekend-banner { flex-direction: column; text-align: center; gap: 2.5rem; padding: 2.5rem; }
+  .weekend-content-left { max-width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .weekend-visual-right { width: 160px; height: 160px; }
+  .weekend-visual-right span.large-food-illustration { font-size: 6rem; }
+}
+
+@media (max-width: 767px) {
+  .offers-header .section-title { font-size: 2.4rem; }
+  .hero-ticket { flex-direction: column; }
+  .ticket-left { padding: 2rem; }
+  .ticket-right { border-left: none; border-top: 2px dashed rgba(255, 255, 255, 0.25); padding: 2rem; }
+  .ticket-punch-top, .ticket-punch-bottom { display: none; }
+  .referral-reward-box { flex-direction: column; width: 100%; gap: 1rem; }
+}
