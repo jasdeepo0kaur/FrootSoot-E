@@ -72,14 +72,6 @@ FrootSoot-E
 
 ---
 
-## 📸 Preview
-
-<img width="100%" alt="Homepage Preview" src="assets/preview.png">
-
-> *(Replace this image with your own homepage screenshot if available.)*
-
----
-
 ## 📦 Installation
 
 1. Clone the repository
